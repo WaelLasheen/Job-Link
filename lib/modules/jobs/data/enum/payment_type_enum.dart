@@ -1,0 +1,1 @@
+enum PaymentTypeEnum { perHour, perMonth }
