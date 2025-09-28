@@ -13,8 +13,8 @@ const lightThemeDefinition = AppTheme(
 
   subtitleStyle: TextStyle(
     fontSize: 22,
-    fontWeight: FontWeight.w500,
-    color: Color(0xFF3B4C5F),
+    fontWeight: FontWeight.w600,
+    color: Color(0xFF1C1C1E),
   ),
 
   labelStyle: TextStyle(
@@ -43,4 +43,8 @@ const lightThemeDefinition = AppTheme(
 
   richTextTitleStyle: TextStyle(fontSize: 32, color: Color(0xFF1C1C1E)),
   dividerColor: Color(0xFFB9C2CA),
+  grey: Colors.grey,
+  chipColor: Color(0xFF42A5F5),
+  ofWhiteColor: Color(0xFFEEF0F2),
+  descriptionColor: Color(0xFF969294),
 );

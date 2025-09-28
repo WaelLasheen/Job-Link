@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:job_link/core/theme/app_theme.dart';
 
 class ImageWithTitleCard extends StatelessWidget {
   final String imagePath;
@@ -21,6 +22,8 @@ class ImageWithTitleCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final AppTheme theme = Theme.of(context).extension<AppTheme>()!;
+
     return GestureDetector(
       onTap: onTap,
       child: Container(
@@ -45,7 +48,7 @@ class ImageWithTitleCard extends StatelessWidget {
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: isSelected ? Colors.blue : Colors.grey[600],
+                color: isSelected ? theme.blue : theme.grey,
               ),
             ),
           ],

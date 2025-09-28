@@ -26,7 +26,7 @@ class GetJobsScreen extends StatelessWidget {
             return ListView.separated(
               padding: const EdgeInsets.all(12),
               itemCount: jobs.length,
-              separatorBuilder: (_, _) => Splitter(),
+              separatorBuilder: (_, _) => const Splitter(),
               itemBuilder: (context, index) {
                 return JobCard(
                   job: jobs[index],

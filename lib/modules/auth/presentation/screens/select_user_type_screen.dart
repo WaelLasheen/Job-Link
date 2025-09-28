@@ -6,7 +6,7 @@ import 'package:job_link/modules/auth/data/enum/user_types_enum.dart';
 import 'package:job_link/modules/auth/controllers/user_provider.dart';
 import 'package:job_link/core/shared/widgets/app_button.dart';
 import 'package:job_link/core/shared/widgets/image_with_title_card.dart';
-import 'package:job_link/modules/auth/presentation/widgets/rich_text_title.dart';
+import 'package:job_link/core/shared/widgets/rich_text_title.dart';
 import 'package:provider/provider.dart';
 
 class SelectUserTypeScreen extends StatelessWidget {

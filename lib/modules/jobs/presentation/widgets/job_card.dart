@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_link/core/theme/app_theme.dart';
 import 'package:job_link/modules/jobs/data/enum/payment_type_enum.dart';
 import 'package:job_link/modules/jobs/data/model/job_model.dart';
 
@@ -10,6 +11,7 @@ class JobCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final AppTheme theme = Theme.of(context).extension<AppTheme>()!;
     Color chipColor = job.paymentType == PaymentTypeEnum.perHour
         ? Colors.green.shade300
         : Colors.orange.shade300;
@@ -27,7 +29,7 @@ class JobCard extends StatelessWidget {
               job.description,
               maxLines: 3,
               overflow: TextOverflow.ellipsis,
-              style: const TextStyle(color: Colors.black87),
+              style: theme.bodyStyle.copyWith(color: theme.descriptionColor),
             ),
           ),
         ),
@@ -36,22 +38,26 @@ class JobCard extends StatelessWidget {
   }
 
   Widget title(BuildContext context, Color chipColor) {
+    final AppTheme theme = Theme.of(context).extension<AppTheme>()!;
     return Row(
       spacing: 4,
       children: [
         Expanded(
           child: Text(
             job.title,
-            style: Theme.of(
-              context,
-            ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+            style: theme.titleStyle.copyWith(fontSize: 25),
+            maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
         ),
         Chip(
           label: Text(
             job.paymentType.name,
-            style: const TextStyle(color: Colors.white),
+            style: theme.bodyStyle.copyWith(
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+              color: theme.ofWhiteColor,
+            ),
           ),
           backgroundColor: chipColor,
         ),

@@ -8,24 +8,24 @@ const darkThemeDefinition = AppTheme(
   titleStyle: TextStyle(
     fontSize: 28,
     fontWeight: FontWeight.bold,
-    color: Color(0xFF1C1C1E),
+    color: Colors.white,
   ),
 
   subtitleStyle: TextStyle(
     fontSize: 22,
     fontWeight: FontWeight.w500,
-    color: Color(0xFF3B4C5F),
+    color: Colors.white,
   ),
 
   labelStyle: TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.bold,
-    color: Color(0xFF1C1C1E),
+    color: Colors.white,
   ),
 
   textFieldStyle: TextStyle(
     fontSize: 20,
-    color: Color(0XFF1E1E24),
+    color: Colors.white,
     fontWeight: FontWeight.w500,
   ),
 
@@ -38,9 +38,13 @@ const darkThemeDefinition = AppTheme(
   bodyStyle: TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.normal,
-    color: Color(0xFF1F2937),
+    color: Colors.white,
   ),
 
-  richTextTitleStyle: TextStyle(fontSize: 32, color: Color(0xFF1C1C1E)),
+  richTextTitleStyle: TextStyle(fontSize: 32, color: Colors.white),
   dividerColor: Color(0xFFE0E0E0),
+  grey: Colors.grey,
+  chipColor: Colors.blue,
+  ofWhiteColor: Color(0xFFFBF5F3),
+  descriptionColor: Color(0xFF969294),
 );

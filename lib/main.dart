@@ -28,23 +28,16 @@ class JobLink extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // MultiProvider(providers: [
-    //   ChangeNotifierProvider(create: (context) => UserProvider()),
-    //   ChangeNotifierProvider(create: (context) => JobProvider()),
-    // ]);
     return ChangeNotifierProvider(
       create: (BuildContext context) => UserProvider(),
       child: MaterialApp(
         theme: ThemeData.light().copyWith(
           extensions: const [lightThemeDefinition],
         ),
-        // darkTheme: ThemeData.dark().copyWith(
-        //   extensions: const [darkThemeDefinition],
-        // ),
         darkTheme: ThemeData.dark().copyWith(
           extensions: const [darkThemeDefinition],
         ),
-        themeMode: ThemeMode.light,
+        themeMode: ThemeMode.dark,
         debugShowCheckedModeBanner: false,
         onGenerateRoute: AppRouter().generateRoute,
       ),

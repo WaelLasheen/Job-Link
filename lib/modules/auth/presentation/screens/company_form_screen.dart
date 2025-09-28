@@ -6,7 +6,7 @@ import 'package:job_link/modules/auth/data/models/job_owner.dart';
 import 'package:job_link/core/shared/validation/validation_services.dart';
 import 'package:job_link/core/shared/widgets/app_button.dart';
 import 'package:job_link/core/shared/widgets/app_text_field.dart';
-import 'package:job_link/modules/auth/presentation/widgets/rich_text_title.dart';
+import 'package:job_link/core/shared/widgets/rich_text_title.dart';
 
 class CompanyFormScreen extends StatefulWidget {
   const CompanyFormScreen({super.key});

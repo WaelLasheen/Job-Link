@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:job_link/core/consts/assets_path/image_url.dart';
+import 'package:job_link/core/shared/widgets/rich_text_title.dart';
 import 'package:job_link/modules/auth/data/models/job_owner.dart';
 import 'package:job_link/core/shared/validation/validation_services.dart';
 import 'package:job_link/core/shared/widgets/app_button.dart';
@@ -48,7 +49,11 @@ class _AddJobScreenState extends State<AddJobScreen> {
               child: Column(
                 spacing: 16,
                 children: [
-                  _title(),
+                  const RichTextTitle(
+                    titlePart1: 'Please, ',
+                    titlePart2: 'fill in the following ',
+                    titlePart3: 'Fields',
+                  ),
                   const SizedBox(height: 20),
 
                   AppTextField(
@@ -89,26 +94,6 @@ class _AddJobScreenState extends State<AddJobScreen> {
     );
   }
 
-  Widget _title() {
-    return RichText(
-      textAlign: TextAlign.center,
-      text: TextSpan(
-        style: const TextStyle(fontSize: 32, color: Colors.black),
-        children: const [
-          TextSpan(
-            text: "Please ",
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
-          ),
-          TextSpan(text: "fill in the following "),
-          TextSpan(
-            text: "Fields",
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
-          ),
-        ],
-      ),
-    );
-  }
-
   Widget paymentType() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -144,8 +129,8 @@ class _AddJobScreenState extends State<AddJobScreen> {
       },
       builder: (context, state) {
         return AppButton(
-          text: state is JobsLoading? 'Wait': 'Add job',
-          color: state is JobsLoading? Colors.grey:Colors.blue,
+          text: state is JobsLoading ? 'Wait' : 'Add job',
+          color: state is JobsLoading ? Colors.grey : Colors.blue,
           onPressed: () {
             if (formKey.currentState!.validate() && state is! JobsLoading) {
               Job job = Job(

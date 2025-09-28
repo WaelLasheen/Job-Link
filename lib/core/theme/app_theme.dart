@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 class AppTheme extends ThemeExtension<AppTheme> {
   final Color accentLighterBlue;
   final Color blue;
+  final Color grey;
   final Color dividerColor;
+  final Color chipColor;
+  final Color ofWhiteColor;
+  final Color descriptionColor;
 
   final TextStyle titleStyle;
   final TextStyle subtitleStyle;
@@ -24,6 +28,10 @@ class AppTheme extends ThemeExtension<AppTheme> {
     required this.blue,
     required this.richTextTitleStyle,
     required this.dividerColor,
+    required this.grey,
+    required this.chipColor,
+    required this.ofWhiteColor,
+    required this.descriptionColor,
   });
 
   @override
@@ -48,6 +56,10 @@ class AppTheme extends ThemeExtension<AppTheme> {
     TextStyle? textFieldStyle,
     TextStyle? richTextTitleStyle,
     Color? dividerColor,
+    Color? grey,
+    Color? chipColor,
+    Color? ofWhiteColor,
+    Color? descriptionColor,
   }) {
     return AppTheme(
       accentLighterBlue: accentLighterBlue ?? this.accentLighterBlue,
@@ -60,6 +72,10 @@ class AppTheme extends ThemeExtension<AppTheme> {
       richTextTitleStyle: richTextTitleStyle ?? this.richTextTitleStyle,
       textFieldStyle: textFieldStyle ?? this.textFieldStyle,
       dividerColor: dividerColor ?? this.dividerColor,
+      grey: grey ?? this.grey,
+      chipColor: chipColor ?? this.chipColor,
+      ofWhiteColor: ofWhiteColor ?? this.ofWhiteColor,
+      descriptionColor: descriptionColor ?? this.descriptionColor,
     );
   }
 
@@ -87,6 +103,10 @@ class AppTheme extends ThemeExtension<AppTheme> {
       )!,
       textFieldStyle: TextStyle.lerp(textFieldStyle, other.textFieldStyle, t)!,
       dividerColor: Color.lerp(dividerColor, other.dividerColor, t)!,
+      grey: Color.lerp(grey, other.grey, t)!,
+      chipColor: Color.lerp(chipColor, other.chipColor, t)!,
+      ofWhiteColor: Color.lerp(ofWhiteColor, other.ofWhiteColor, t)!,
+      descriptionColor: Color.lerp(descriptionColor, other.descriptionColor, t)!,
     );
   }
 }
