@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:job_link/modules/jobs_applications/controller/job_application_cubit/job_application_cubit.dart';
 import 'package:job_link/modules/jobs_applications/data/enum/application_status_enum.dart';
 import 'package:job_link/modules/jobs_applications/data/model/job_application.dart';
-import 'package:job_link/modules/jobs_applications/presentation/widgets/success_ui.dart';
+import 'package:job_link/modules/jobs_applications/presentation/widgets/get_jobs_applications_successfully.dart';
 
 class GetJobsApplicationsScreen extends StatelessWidget {
   final bool isOnlyAccepted;
@@ -33,7 +33,7 @@ class GetJobsApplicationsScreen extends StatelessWidget {
             if (jobApplications.isEmpty) {
               return const Center(child: Text('No jobs Application found.'));
             } else {
-              return SuccessUi(
+              return GetJobsApplicationsSuccessfully(
                 jobApplications: jobApplications,
                 isOnlyAccepted: isOnlyAccepted,
               );
