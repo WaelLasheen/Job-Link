@@ -41,6 +41,9 @@ class JobLink extends StatelessWidget {
         // darkTheme: ThemeData.dark().copyWith(
         //   extensions: const [darkThemeDefinition],
         // ),
+        darkTheme: ThemeData.dark().copyWith(
+          extensions: const [darkThemeDefinition],
+        ),
         themeMode: ThemeMode.light,
         debugShowCheckedModeBanner: false,
         onGenerateRoute: AppRouter().generateRoute,

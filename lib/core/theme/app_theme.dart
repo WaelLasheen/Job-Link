@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class AppTheme extends ThemeExtension<AppTheme> {
   final Color accentLighterBlue;
   final Color blue;
+  final Color dividerColor;
+
   final TextStyle titleStyle;
   final TextStyle subtitleStyle;
   final TextStyle labelStyle;
@@ -21,6 +23,7 @@ class AppTheme extends ThemeExtension<AppTheme> {
     required this.hintStyle,
     required this.blue,
     required this.richTextTitleStyle,
+    required this.dividerColor,
   });
 
   @override
@@ -43,6 +46,8 @@ class AppTheme extends ThemeExtension<AppTheme> {
     Color? blue,
     TextStyle? largeTitleStyle,
     TextStyle? textFieldStyle,
+    TextStyle? richTextTitleStyle,
+    Color? dividerColor,
   }) {
     return AppTheme(
       accentLighterBlue: accentLighterBlue ?? this.accentLighterBlue,
@@ -52,8 +57,9 @@ class AppTheme extends ThemeExtension<AppTheme> {
       bodyStyle: bodyStyle ?? this.bodyStyle,
       hintStyle: hintStyle ?? this.hintStyle,
       blue: blue ?? this.blue,
-      richTextTitleStyle: largeTitleStyle ?? this.richTextTitleStyle,
+      richTextTitleStyle: richTextTitleStyle ?? this.richTextTitleStyle,
       textFieldStyle: textFieldStyle ?? this.textFieldStyle,
+      dividerColor: dividerColor ?? this.dividerColor,
     );
   }
 
@@ -80,6 +86,7 @@ class AppTheme extends ThemeExtension<AppTheme> {
         t,
       )!,
       textFieldStyle: TextStyle.lerp(textFieldStyle, other.textFieldStyle, t)!,
+      dividerColor: Color.lerp(dividerColor, other.dividerColor, t)!,
     );
   }
 }

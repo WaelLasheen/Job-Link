@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:job_link/core/router/router_strings.dart';
+import 'package:job_link/core/theme/app_theme.dart';
 import 'package:job_link/modules/auth/data/models/freelancer.dart';
 import 'package:job_link/modules/auth/data/models/job_owner.dart';
 import 'package:job_link/modules/auth/data/models/user.dart';
@@ -15,6 +16,8 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool isFreelancer = user is Freelancer;
+    final AppTheme theme = Theme.of(context).extension<AppTheme>()!;
+
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
@@ -78,8 +81,8 @@ class CustomDrawer extends StatelessWidget {
               },
             ),
           ),
-          const Divider(
-            color: Color(0xFFE0E0E0),
+          Divider(
+            color: theme.dividerColor,
             height: 40,
             indent: 16,
             endIndent: 16,

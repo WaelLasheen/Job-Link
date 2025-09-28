@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_link/core/theme/app_theme.dart';
 import 'package:job_link/modules/home/data/model/drawer_item_model.dart';
 
 class DrawerItem extends StatelessWidget {
@@ -10,6 +11,8 @@ class DrawerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final AppTheme theme = Theme.of(context).extension<AppTheme>()!;
+
     return InkWell(
       onTap: item.onTap,
       child: Padding(
@@ -23,10 +26,7 @@ class DrawerItem extends StatelessWidget {
             const SizedBox(width: 16),
             Text(
               item.title,
-              style: TextStyle(
-                color: item.color,
-                fontSize: 16,
-              ),
+              style: theme.bodyStyle.copyWith(color: item.color),
             ),
           ],
         ),

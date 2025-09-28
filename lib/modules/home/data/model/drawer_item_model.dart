@@ -10,6 +10,6 @@ class DrawerItemModel {
     required this.title,
     required this.icon,
     required this.onTap,
-    this.color = const Color(0xFF616161)
+    this.color = Colors.grey,
   });
 }

@@ -42,4 +42,5 @@ const lightThemeDefinition = AppTheme(
   ),
 
   richTextTitleStyle: TextStyle(fontSize: 32, color: Color(0xFF1C1C1E)),
+  dividerColor: Color(0xFFB9C2CA),
 );
