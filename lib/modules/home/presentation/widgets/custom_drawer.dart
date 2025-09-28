@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_link/core/controllers/theme_hydrated_cubit/theme_hydrated_cubit.dart';
 import 'package:job_link/core/router/router_strings.dart';
 import 'package:job_link/core/theme/app_theme.dart';
 import 'package:job_link/modules/auth/data/models/freelancer.dart';
@@ -17,7 +18,8 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     bool isFreelancer = user is Freelancer;
     final AppTheme theme = Theme.of(context).extension<AppTheme>()!;
-
+    final themeCubit = ThemeHydratedCubit.get(context);
+    final isDark = themeCubit.state == ThemeMode.dark;
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
@@ -86,6 +88,19 @@ class CustomDrawer extends StatelessWidget {
             height: 40,
             indent: 16,
             endIndent: 16,
+          ),
+          SwitchListTile(
+            secondary: Icon(
+              isDark ? Icons.dark_mode : Icons.light_mode,
+              color: Theme.of(context).colorScheme.secondary,
+            ),
+            title: const Text('Dark Mode'),
+            value: isDark,
+            activeColor: theme.blue,
+            inactiveThumbColor: theme.grey,
+            onChanged: (_) {
+              themeCubit.toggleTheme();
+            },
           ),
           DrawerItem(
             item: DrawerItemModel(
