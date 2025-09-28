@@ -6,6 +6,7 @@ import 'package:job_link/modules/auth/data/models/job_owner.dart';
 import 'package:job_link/core/shared/validation/validation_services.dart';
 import 'package:job_link/core/shared/widgets/app_button.dart';
 import 'package:job_link/core/shared/widgets/app_text_field.dart';
+import 'package:job_link/modules/auth/presentation/widgets/rich_text_title.dart';
 
 class CompanyFormScreen extends StatefulWidget {
   const CompanyFormScreen({super.key});
@@ -47,7 +48,11 @@ class _CompanyFormScreenState extends State<CompanyFormScreen> {
               child: Column(
                 spacing: 16,
                 children: [
-                  _title(),
+                  const RichTextTitle(
+                    titlePart1: 'Please ',
+                    titlePart2: 'fill in the following ',
+                    titlePart3: 'information',
+                  ),
                   const SizedBox(height: 20),
                   AppTextField(
                     hint: 'Company name',
@@ -79,26 +84,6 @@ class _CompanyFormScreenState extends State<CompanyFormScreen> {
             ),
           ),
         ),
-      ),
-    );
-  }
-
-  Widget _title() {
-    return RichText(
-      textAlign: TextAlign.center,
-      text: TextSpan(
-        style: const TextStyle(fontSize: 32, color: Colors.black),
-        children: const [
-          TextSpan(
-            text: "Please ",
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
-          ),
-          TextSpan(text: "fill in the following "),
-          TextSpan(
-            text: "information",
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
-          ),
-        ],
       ),
     );
   }

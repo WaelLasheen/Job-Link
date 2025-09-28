@@ -28,7 +28,7 @@ class _AppPasswordFieldState extends State<AppPasswordField> {
       obscureText: _obscure,
       validator: widget.validator,
       decoration: InputDecoration(
-        prefixIcon: const Icon(Icons.lock, color: Colors.blue),
+        prefixIcon: Icon(Icons.lock, color: theme.blue),
         hintText: widget.hint,
         hintStyle: theme.hintStyle,
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
@@ -47,7 +47,7 @@ class _AppPasswordFieldState extends State<AppPasswordField> {
           onPressed: () => setState(() => _obscure = !_obscure),
         ),
       ),
-      style: theme.labelStyle,
+      style: theme.textFieldStyle,
     );
   }
 }

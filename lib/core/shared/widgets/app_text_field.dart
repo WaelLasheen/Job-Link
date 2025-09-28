@@ -38,7 +38,7 @@ class AppTextField extends StatelessWidget {
         ),
         hintStyle: theme.hintStyle,
       ),
-      style: theme.labelStyle,
+      style: theme.textFieldStyle,
       keyboardType: keyboardType,
     );
   }

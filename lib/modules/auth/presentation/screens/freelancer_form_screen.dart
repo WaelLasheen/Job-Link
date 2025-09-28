@@ -7,6 +7,7 @@ import 'package:job_link/core/shared/validation/validation_services.dart';
 import 'package:job_link/core/shared/widgets/app_button.dart';
 import 'package:job_link/core/shared/widgets/app_text_field.dart';
 import 'package:job_link/modules/auth/presentation/widgets/pick_freelancer_cv.dart';
+import 'package:job_link/modules/auth/presentation/widgets/rich_text_title.dart';
 import 'package:provider/provider.dart';
 
 class FreelancerFormScreen extends StatefulWidget {
@@ -55,7 +56,11 @@ class _FreelancerFormScreenState extends State<FreelancerFormScreen> {
               child: Column(
                 spacing: 16,
                 children: [
-                  _title(),
+                  const RichTextTitle(
+                    titlePart1: 'Please ',
+                    titlePart2: 'fill in the following ',
+                    titlePart3: 'information',
+                  ),
                   const SizedBox(height: 20),
                   AppTextField(
                     hint: 'Name',
@@ -103,26 +108,6 @@ class _FreelancerFormScreenState extends State<FreelancerFormScreen> {
             ),
           ),
         ),
-      ),
-    );
-  }
-
-  Widget _title() {
-    return RichText(
-      textAlign: TextAlign.center,
-      text: TextSpan(
-        style: const TextStyle(fontSize: 32, color: Colors.black),
-        children: const [
-          TextSpan(
-            text: "Please ",
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
-          ),
-          TextSpan(text: "fill in the following "),
-          TextSpan(
-            text: "information",
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
-          ),
-        ],
       ),
     );
   }

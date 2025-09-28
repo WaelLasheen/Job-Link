@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:job_link/core/consts/assets_path/image_url.dart';
 import 'package:job_link/core/router/router_strings.dart';
+import 'package:job_link/core/theme/app_theme.dart';
 import 'package:job_link/modules/auth/data/enum/user_types_enum.dart';
 import 'package:job_link/modules/auth/controllers/user_provider.dart';
 import 'package:job_link/core/shared/widgets/app_button.dart';
 import 'package:job_link/core/shared/widgets/image_with_title_card.dart';
+import 'package:job_link/modules/auth/presentation/widgets/rich_text_title.dart';
 import 'package:provider/provider.dart';
 
 class SelectUserTypeScreen extends StatelessWidget {
@@ -17,9 +19,13 @@ class SelectUserTypeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              _title(),
+              const RichTextTitle(
+                titlePart1: "Let's ",
+                titlePart2: 'personalize your ',
+                titlePart3: 'experience',
+              ),
               const SizedBox(height: 20),
-              _subTitle(),
+              _subTitle(context),
               const SizedBox(height: 30),
               _selectFreelance(context),
               _selectCompany(context),
@@ -35,33 +41,15 @@ class SelectUserTypeScreen extends StatelessWidget {
     );
   }
 
-  Widget _title() {
-    return RichText(
-      textAlign: TextAlign.center,
-      text: TextSpan(
-        style: const TextStyle(fontSize: 32, color: Colors.black),
-        children: const [
-          TextSpan(
-            text: "Let's ",
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
-          ),
-          TextSpan(text: "personalize your "),
-          TextSpan(
-            text: "experience",
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
-          ),
-        ],
-      ),
-    );
-  }
+  Widget _subTitle(BuildContext context) {
+    final AppTheme theme = Theme.of(context).extension<AppTheme>()!;
 
-  Widget _subTitle() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8),
-      child: const Text(
+      child: Text(
         "Tell us who you are so we can tailor the app just for you.",
         textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 20, color: Colors.grey),
+        style: theme.hintStyle.copyWith(fontSize: 20),
       ),
     );
   }
