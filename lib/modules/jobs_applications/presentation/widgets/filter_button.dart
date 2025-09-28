@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_link/core/theme/app_theme.dart';
 import 'package:job_link/modules/jobs_applications/controller/filter_job_application_status_cubit/filter_job_application_by_status_cubit.dart';
 import 'package:job_link/modules/jobs_applications/data/enum/application_status_enum.dart';
 import 'package:job_link/modules/jobs_applications/data/services/get_application_status_color.dart';
@@ -9,6 +10,8 @@ class FilterButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final AppTheme theme = Theme.of(context).extension<AppTheme>()!;
+
     return InkWell(
       onTap: () {
         FilterJobApplicationByStatusCubit.get(
@@ -16,14 +19,10 @@ class FilterButton extends StatelessWidget {
         ).filterJobApplication(status);
       },
       child: Chip(
-        backgroundColor: getJobApplicationStatusColor(status),
+        backgroundColor: getJobApplicationStatusColor(status, context),
         label: Text(
           status.name,
-          style: const TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 16,
-          ),
+          style: theme.labelStyle.copyWith(color: Colors.white, fontSize: 18),
         ),
       ),
     );

@@ -47,4 +47,8 @@ const lightThemeDefinition = AppTheme(
   chipColor: Color(0xFF42A5F5),
   ofWhiteColor: Color(0xFFEEF0F2),
   descriptionColor: Color(0xFF969294),
+  jobApplicationAllColor: Color(0xFF64B5F6),
+  jobApplicationPendingColor: Colors.grey,
+  jobApplicationAcceptedColor: Color(0xFF81C784),
+  jobApplicationRejectedColor:Color(0xFFE57373) 
 );

@@ -47,4 +47,8 @@ const darkThemeDefinition = AppTheme(
   chipColor: Colors.blue,
   ofWhiteColor: Color(0xFFFBF5F3),
   descriptionColor: Color(0xFF969294),
+    jobApplicationAllColor: Color(0xFF42A5F5),
+  jobApplicationPendingColor: Colors.grey,
+  jobApplicationAcceptedColor: Color(0xFF66BB6A),
+  jobApplicationRejectedColor:Color(0xFFEF5350) 
 );

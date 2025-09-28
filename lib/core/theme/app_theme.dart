@@ -8,6 +8,11 @@ class AppTheme extends ThemeExtension<AppTheme> {
   final Color chipColor;
   final Color ofWhiteColor;
   final Color descriptionColor;
+  final Color jobApplicationAllColor;
+  final Color jobApplicationPendingColor;
+  final Color jobApplicationAcceptedColor;
+  final Color jobApplicationRejectedColor;
+
 
   final TextStyle titleStyle;
   final TextStyle subtitleStyle;
@@ -32,6 +37,10 @@ class AppTheme extends ThemeExtension<AppTheme> {
     required this.chipColor,
     required this.ofWhiteColor,
     required this.descriptionColor,
+    required this.jobApplicationAllColor,
+    required this.jobApplicationPendingColor,
+    required this.jobApplicationAcceptedColor,
+    required this.jobApplicationRejectedColor,
   });
 
   @override
@@ -60,6 +69,10 @@ class AppTheme extends ThemeExtension<AppTheme> {
     Color? chipColor,
     Color? ofWhiteColor,
     Color? descriptionColor,
+    Color? jobApplicationAllColor,
+    Color? jobApplicationPendingColor,
+    Color? jobApplicationAcceptedColor,
+    Color? jobApplicationRejectedColor,
   }) {
     return AppTheme(
       accentLighterBlue: accentLighterBlue ?? this.accentLighterBlue,
@@ -76,6 +89,10 @@ class AppTheme extends ThemeExtension<AppTheme> {
       chipColor: chipColor ?? this.chipColor,
       ofWhiteColor: ofWhiteColor ?? this.ofWhiteColor,
       descriptionColor: descriptionColor ?? this.descriptionColor,
+      jobApplicationAllColor: jobApplicationAllColor ?? this.jobApplicationAllColor,
+      jobApplicationPendingColor: jobApplicationPendingColor ?? this.jobApplicationPendingColor,
+      jobApplicationAcceptedColor: jobApplicationAcceptedColor ?? this.jobApplicationAcceptedColor,
+      jobApplicationRejectedColor: jobApplicationRejectedColor ?? this.jobApplicationRejectedColor,
     );
   }
 
@@ -107,6 +124,10 @@ class AppTheme extends ThemeExtension<AppTheme> {
       chipColor: Color.lerp(chipColor, other.chipColor, t)!,
       ofWhiteColor: Color.lerp(ofWhiteColor, other.ofWhiteColor, t)!,
       descriptionColor: Color.lerp(descriptionColor, other.descriptionColor, t)!,
+      jobApplicationAllColor: Color.lerp(jobApplicationAllColor, other.jobApplicationAllColor, t)!,
+      jobApplicationPendingColor: Color.lerp(jobApplicationPendingColor, other.jobApplicationPendingColor, t)!,
+      jobApplicationAcceptedColor: Color.lerp(jobApplicationAcceptedColor, other.jobApplicationAcceptedColor, t)!,
+      jobApplicationRejectedColor: Color.lerp(jobApplicationRejectedColor, other.jobApplicationRejectedColor, t)!,
     );
   }
 }
