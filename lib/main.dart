@@ -38,6 +38,7 @@ class JobLink extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final appRouter = AppRouter();
     return ChangeNotifierProvider(
       create: (BuildContext context) => UserProvider(),
       child: BlocProvider(
@@ -55,7 +56,7 @@ class JobLink extends StatelessWidget {
                 extensions: const [darkThemeDefinition],
               ),
               debugShowCheckedModeBanner: false,
-              onGenerateRoute: AppRouter().generateRoute,
+              onGenerateRoute: appRouter.generateRoute,
             );
           },
         ),
