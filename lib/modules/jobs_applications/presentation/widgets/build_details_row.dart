@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_link/core/theme/app_theme.dart';
 
 class BuildDetailsRow extends StatelessWidget {
   final String label;
@@ -7,16 +8,15 @@ class BuildDetailsRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final AppTheme theme = Theme.of(context).extension<AppTheme>()!;
+
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4.0),
       child: RichText(
         text: TextSpan(
-          style: const TextStyle(fontSize: 16, color: Colors.black87),
+          style: theme.bodyStyle,
           children: [
-            TextSpan(
-              text: '$label: ',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
+            TextSpan(text: '$label: ', style: theme.labelStyle),
             TextSpan(text: value),
           ],
         ),
