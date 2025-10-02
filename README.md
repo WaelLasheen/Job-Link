@@ -59,11 +59,10 @@ It is a simple **freelancing platform** where:
    ```bash
    git clone https://github.com/YOUR_USERNAME/job-link-app.git
    cd job-link-app
-````
+   
 2. Install dependencies:
    ```bash
    flutter pub get
-````
 
 3. Setup **Firebase**:
 
