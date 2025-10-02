@@ -33,20 +33,20 @@ It is a simple **freelancing platform** where:
 
 <p align="center">
   <img src="https://i.postimg.cc/vTnN31KT/Screenshot.jpg" width="250"/>
-  <img src="https://i.postimg.cc/ZWgwLZxz/Screenshot.jpg" width="250"/>
+  <img src="https://i.postimg.cc/k5MLqgVG/Screenshot.jpg" width="250"/>
   <img src="https://i.postimg.cc/bsg0m883/Screenshot.jpg" width="250"/>
 </p>
 
 <p align="center">
-  <img src="https://i.postimg.cc/WDgw6Z4T/Screenshot.jpg" width="250"/>
-  <img src="https://i.postimg.cc/bsyVymw3/Screenshot.jpg" width="250"/>
-  <img src="https://i.postimg.cc/dkGrrc4G/Screenshot.jpg" width="250"/>
+  <img src="https://i.postimg.cc/PqFVHzsp/Screenshot.jpg" width="250"/>
+  <img src="https://i.postimg.cc/156kKThh/Screenshot.jpg" width="250"/>
+  <img src="https://i.postimg.cc/PxRyGtDV/Screenshot.jpg" width="250"/>
 </p>
 
 <p align="center">
-  <img src="https://i.postimg.cc/cKpfvLM4/Screenshot.jpg" width="250"/>
-  <img src="https://i.postimg.cc/YhMfN05T/Screenshot.jpg" width="250"/>
-  <img src="https://i.postimg.cc/KRxr74Xh/Screenshot.jpg" width="250"/>
+  <img src="https://i.postimg.cc/gJJsBwxR/Screenshot.jpg" width="250"/>
+  <img src="https://i.postimg.cc/qMCbTCjt/Screenshot.jpg" width="250"/>
+  <img src="https://i.postimg.cc/v8pRfyK5/Screenshot.jpg" width="250"/>
 </p>
 
 👉 **See the full album here:** [Screenshots Gallery](https://postimg.cc/gallery/tj6HWJH)
