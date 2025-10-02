@@ -34,7 +34,7 @@ It is a simple **freelancing platform** where:
 <p align="center">
   <img src="https://i.postimg.cc/vTnN31KT/Screenshot.jpg" width="250"/>
   <img src="https://i.postimg.cc/k5MLqgVG/Screenshot.jpg" width="250"/>
-  <img src="https://i.postimg.cc/bsg0m883/Screenshot.jpg" width="250"/>
+  <img src="https://i.postimg.cc/056RzjVr/Screenshot.jpg" width="250"/>
 </p>
 
 <p align="center">
