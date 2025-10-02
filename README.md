@@ -1,16 +1,61 @@
-# job_link
+# 📱 Job Link App
 
-A new Flutter project.
+**Job Link App** is my final project during the ITI training.  
+It is a simple **freelancing platform** where:
 
-## Getting Started
+- **Job owners** can post jobs.
+- **Freelancers** can apply to jobs.
+- Job owners can **accept or reject** applicants and send **tasks** to the accepted freelancers.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 🚀 Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- 👤 **Authentication & Database** using Firebase.  
+- 📄 **CV Storage** with Supabase.  
+- 📡 **Real-time interaction** between job owners and freelancers.  
+- 📶 **Offline support**: Tasks are cached and available offline using Hive.  
+- 🧩 **Cubit for State Management** to keep the app clean and maintainable.  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🛠 Tech Stack
+
+- [Flutter](https://flutter.dev/) – Cross-platform development  
+- [Cubit](https://bloclibrary.dev/#/cubit) – State management  
+- [Firebase](https://firebase.google.com/) – Auth & database  
+- [Supabase](https://supabase.com/) – File storage (CVs)  
+- [Hive](https://docs.hivedb.dev/) – Offline local database  
+
+---
+
+## 📸 Screenshots
+
+<p align="center">
+  <img src="https://i.postimg.cc/GTcKppdn/Screenshot.jpg" width="250"/>
+  <img src="https://i.postimg.cc/ZWgwLZxz/Screenshot.jpg" width="250"/>
+  <img src="https://i.postimg.cc/bsg0m883/Screenshot.jpg" width="250"/>
+</p>
+
+<p align="center">
+  <img src="https://i.postimg.cc/WDgw6Z4T/Screenshot.jpg" width="250"/>
+  <img src="https://i.postimg.cc/bsyVymw3/Screenshot.jpg" width="250"/>
+  <img src="https://i.postimg.cc/dkGrrc4G/Screenshot.jpg" width="250"/>
+</p>
+
+<p align="center">
+  <img src="https://i.postimg.cc/cKpfvLM4/Screenshot.jpg" width="250"/>
+  <img src="https://i.postimg.cc/YhMfN05T/Screenshot.jpg" width="250"/>
+  <img src="https://i.postimg.cc/KRxr74Xh/Screenshot.jpg" width="250"/>
+</p>
+
+👉 **See the full album here:** [Screenshots Gallery](https://postimg.cc/gallery/tj6HWJH)
+
+---
+
+## ⚡ Installation & Setup
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/job-link-app.git
+   cd job-link-app
