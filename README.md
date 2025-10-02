@@ -32,7 +32,7 @@ It is a simple **freelancing platform** where:
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="https://i.postimg.cc/GTcKppdn/Screenshot.jpg" width="250"/>
+  <img src="https://i.postimg.cc/vTnN31KT/Screenshot.jpg" width="250"/>
   <img src="https://i.postimg.cc/ZWgwLZxz/Screenshot.jpg" width="250"/>
   <img src="https://i.postimg.cc/bsg0m883/Screenshot.jpg" width="250"/>
 </p>
