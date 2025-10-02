@@ -4,6 +4,7 @@ import 'package:job_link/core/shared/widgets/app_button.dart';
 import 'package:job_link/modules/auth/data/models/freelancer.dart';
 import 'package:job_link/modules/jobs/data/model/job_model.dart';
 import 'package:job_link/modules/jobs_applications/controller/job_application_cubit/job_application_cubit.dart';
+import 'package:job_link/modules/jobs_applications/data/enum/application_status_enum.dart';
 import 'package:job_link/modules/jobs_applications/data/model/job_application.dart';
 
 class JobApplicationButton extends StatelessWidget {
@@ -39,7 +40,14 @@ class JobApplicationButton extends StatelessWidget {
           context,
         ).jobApplication;
         bool isApplied = jobApplication != null;
-        String text = isApplied ? 'cancel' : 'apply';
+        late String text;
+        if (!isApplied) {
+          text = 'apply';
+        } else if (jobApplication.status == JobApplicationStatusEnum.accepted) {
+          text = 'Resign';
+        } else {
+          text = 'cancel';
+        }
 
         return AppButton(
           text: state is JobApplicationLoading ? 'wait' : text,
