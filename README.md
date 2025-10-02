@@ -59,3 +59,54 @@ It is a simple **freelancing platform** where:
    ```bash
    git clone https://github.com/YOUR_USERNAME/job-link-app.git
    cd job-link-app
+````
+2. Install dependencies:
+   ```bash
+   flutter pub get
+````
+
+3. Setup **Firebase**:
+
+   * Create a new project in [Firebase Console](https://console.firebase.google.com/).
+   * Enable **Authentication** (Email/Password).
+   * Enable **Cloud Firestore**.
+   * Download your Firebase config file:
+
+     * **Android** → `google-services.json` → put it inside `android/app/`.
+     * **iOS** → `GoogleService-Info.plist` → put it inside `ios/Runner/`.
+   * Run the FlutterFire CLI to generate `firebase_options.dart`:
+
+     ```bash
+     flutterfire configure
+     ```
+   * Replace the generated `firebase_options.dart` inside `/lib/core/`.
+
+4. Setup **Supabase**:
+
+   * Go to [Supabase](https://supabase.com/) and create a new project.
+   * Get your **Project URL** and **Anon/Public API Key** from the dashboard.
+   * Create a bucket (e.g., `cv_uploads`) for storing CV files.
+   * Add your Supabase credentials in a safe place (e.g., `config.dart` or environment variables).
+     ⚠️ **Do not commit these files**.
+
+5. Run the app:
+
+   ```bash
+   flutter run
+   ```
+
+---
+
+📌 **Notes**
+
+* I removed my private config files (**Firebase & Supabase**), so you must add your own.
+* This project was built for **educational purposes** as part of my ITI training.
+* Feel free to explore, learn, and extend the project.
+
+---
+
+🎯 **Future Improvements**
+
+* 🔔 Notifications for job updates.
+* 💬 Chat between job owners and freelancers.
+* 🎨 Improved UI/UX design.
