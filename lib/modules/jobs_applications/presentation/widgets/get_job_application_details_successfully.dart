@@ -7,7 +7,6 @@ import 'package:job_link/modules/jobs_applications/presentation/widgets/actions_
 import 'package:job_link/modules/jobs_applications/presentation/widgets/freelancer_details_card.dart';
 import 'package:job_link/modules/jobs_applications/presentation/widgets/job_application_status.dart';
 import 'package:job_link/modules/jobs_applications/presentation/widgets/job_details_card.dart';
-import 'package:job_link/modules/jobs_applications/presentation/widgets/mention_task_button.dart';
 
 class GetJobApplicationDetailsSuccessfully extends StatelessWidget {
   final JobApplication application;
@@ -38,9 +37,11 @@ class GetJobApplicationDetailsSuccessfully extends StatelessWidget {
           const SizedBox(height: 30),
 
           if (isJobOwner)
-            ActionButtons(applicationId: application.applicationId!),
-
-          if (isJobOwner) MentionTaskButton(job: job, freelancer: freelancer),
+            ActionButtons(
+              applicationId: application.applicationId!,
+              job: job,
+              freelancer: freelancer,
+            ),
         ],
       ),
     );
