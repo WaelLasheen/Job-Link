@@ -27,6 +27,10 @@ class RejectButton extends StatelessWidget {
           return const Center(child: CircularProgressIndicator());
         }
 
+        bool isAccepted =
+            JobApplicationCubit.get(context).jobApplication!.status ==
+            JobApplicationStatusEnum.accepted;
+
         return OutlinedButton(
           onPressed: () {
             willRebuild = true;
@@ -42,9 +46,9 @@ class RejectButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(30),
             ),
           ),
-          child: const Text(
-            'Reject',
-            style: TextStyle(
+          child: Text(
+            isAccepted ? 'Fire' : 'Reject',
+            style: const TextStyle(
               color: Colors.red,
               fontSize: 18,
               fontWeight: FontWeight.w500,
