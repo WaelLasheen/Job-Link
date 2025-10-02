@@ -42,13 +42,13 @@ const darkThemeDefinition = AppTheme(
   ),
 
   richTextTitleStyle: TextStyle(fontSize: 32, color: Colors.white),
-  dividerColor: Color(0xFFE0E0E0),
+  dividerColor: Color(0xFF2C2C2C),
   grey: Colors.grey,
   chipColor: Colors.blue,
   ofWhiteColor: Color(0xFFFBF5F3),
-  descriptionColor: Color(0xFF969294),
-    jobApplicationAllColor: Color(0xFF42A5F5),
-  jobApplicationPendingColor: Colors.grey,
+  descriptionColor: Color(0xFFB0B0B0),
+  jobApplicationAllColor: Color(0xFF42A5F5),
+  jobApplicationPendingColor: Color(0xFF757575),
   jobApplicationAcceptedColor: Color(0xFF66BB6A),
   jobApplicationRejectedColor:Color(0xFFEF5350) 
 );
