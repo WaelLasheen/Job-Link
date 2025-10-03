@@ -84,7 +84,7 @@ It is a simple **freelancing platform** where:
 
    * Go to [Supabase](https://supabase.com/) and create a new project.
    * Get your **Project URL** and **Anon/Public API Key** from the dashboard.
-   * Create a bucket (e.g., `cv_uploads`) for storing CV files.
+   * Create a bucket (e.g., `freelancers_CV`) for storing CV files.
    * Add your Supabase credentials in a safe place (e.g., `config.dart` or environment variables).
      ⚠️ **Do not commit these files**.
 
